@@ -1,25 +1,25 @@
-@import url(/normalize.css);
+@import url(./normalize.css);
 
 @font-face {
   font-family: 'Urbanist';
-  src: url(/fonts/static/Urbanist-Regular.ttf);
+  src: url(./fonts/static/Urbanist-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Urbanist';
-  src: url(/fonts/static/Urbanist-Light.ttf);
+  src: url(./fonts/static/Urbanist-Light.ttf);
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Urbanist';
-  src: url(/fonts/static/Urbanist-Medium.ttf);
+  src: url(./fonts/static/Urbanist-Medium.ttf);
   font-style: medium;
 }
 
 @font-face {
   font-family: 'Urbanist';
-  src: url(/fonts/static/Urbanist-Italic.ttf);
+  src: url(./fonts/static/Urbanist-Italic.ttf);
   font-style: italic;
 }
 
