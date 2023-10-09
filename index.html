@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/card-logo.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+  </head>
+  <body class="page">
+    <div class="page__container">
+      <form class="payment">
+        <h1 class="payment__title">Choose your payment method</h1>
+        <section class="payment__cards">        
+        </section>          
+        <button type="button" class="payment__add">
+          <img src="/images/credit-card.png" class="payment__card">
+          Add payment method
+        </button>
+        <button type="submit" class="payment__submit">Submit</button>
+      </form>
+      <div class="card">
+        <div class="card__overlay">
+          <form class="card__add">  
+            <div class="card__pic">
+              <img src="/images/chip.png" alt="" class="card__chip">
+              <p id="card-name" class="card__name">Vasya Pupkin</p>
+              <p id="card-expiration" class="card__date">09/25</p>
+              <p id="card-number" class="card__number">0000 9999 2222 3333</p>
+              <img src="/images/visa-whit.png" alt="" class="card__visa-logo">
+            </div>          
+            <div class="card__data">
+              <label class="card__label">Name 
+                <input 
+                  class="card__input" 
+                  id="name" 
+                  type="text" 
+                  minlength="2" 
+                  maxlength="40" 
+                  placeholder="John Smith" 
+                  required/>
+                <span class="validity name-error"></span>
+              </label>            
+              <label class="card__label">Expiration 
+                <input 
+                  class="card__input" 
+                  id="expiration" 
+                  type="text" 
+                  minlength="5"
+                  maxlength="5"
+                  pattern="\d{2}\/\d{2}"
+                  placeholder="MM/YY" 
+                  required />
+                <span class="validity expiration-error"></span>
+              </label>            
+              <label class="card__label">Card number
+                <input 
+                  class="card__input" 
+                  id="number" 
+                  type="text" 
+                  placeholder="16-digit card number"
+                  minlength="16"
+                  maxlength="16"
+                  pattern="\d{16}"
+                  required />
+                <span class="validity number-error"></span>
+              </label>            
+              <label class="card__label">CVV
+                <input  
+                  class="card__input"  
+                  id="cvv"   
+                  type="password"   
+                  minlength="3"   
+                  maxlength="3"
+                  placeholder="3-digit code"   
+                  pattern="\d{3}"
+                  required />
+                <span class="validity cvv-error"></span>
+              </label>
+            </div> 
+            <div class="card__buttons">
+              <button class="card__cancel" type="button">Cancel</button>       
+              <button class="card__submit" type="submit">Submit</button>
+            </div>          
+          </form> 
+        </div>        
+        
+      </div>        
+      <template id="cards">
+        <label class="payment__method">
+          <img class="payment__method-logo" src="/images/master.png" alt="иконка платежной системы">
+          <p class="payment__method-number"></p>
+          <p class="payment__method-expires">Expires</p>
+          <p class="payment__method-date"></p>
+          <p id="default"></p>
+          <input type="radio" name="method" class="payment__check" required>
+          <span class="payment__span"></span>
+        </label>
+      </template>
+    </div>  
+    <script src="index.js" type="module"></script>  
+    <script src="./utils/constants.js" type="module"></script>
+  </body>
+</html>
