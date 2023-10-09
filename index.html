@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/card-logo-5f129d0f.svg" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <script type="module" crossorigin src="/assets/index-b7afbea6.js"></script>
+    <link rel="stylesheet" href="/assets/index-dd1936a2.css">
+  </head>
+  <body class="page">
+    <div class="page__container">
+      <form class="payment">
+        <h1 class="payment__title">Choose your payment method</h1>
+        <section class="payment__cards">        
+        </section>          
+        <button type="button" class="payment__add">
+          <img src="/assets/credit-card-4dd72622.png" class="payment__card">
+          Add payment method
+        </button>
+        <button type="submit" class="payment__submit">Submit</button>
+      </form>
+      <div class="card">
+        <div class="card__overlay">
+          <form class="card__add">  
+            <div class="card__pic">
+              <img src="data:image/png;base64,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" alt="" class="card__chip">
+              <p id="card-name" class="card__name">Vasya Pupkin</p>
+              <p id="card-expiration" class="card__date">09/25</p>
+              <p id="card-number" class="card__number">0000 9999 2222 3333</p>
+              <img src="/assets/visa-whit-8e6df7a5.png" alt="" class="card__visa-logo">
+            </div>          
+            <div class="card__data">
+              <label class="card__label">Name 
+                <input 
+                  class="card__input" 
+                  id="name" 
+                  type="text" 
+                  minlength="2" 
+                  maxlength="40" 
+                  placeholder="John Smith" 
+                  required/>
+                <span class="validity name-error"></span>
+              </label>            
+              <label class="card__label">Expiration 
+                <input 
+                  class="card__input" 
+                  id="expiration" 
+                  type="text" 
+                  minlength="5"
+                  maxlength="5"
+                  pattern="\d{2}\/\d{2}"
+                  placeholder="MM/YY" 
+                  required />
+                <span class="validity expiration-error"></span>
+              </label>            
+              <label class="card__label">Card number
+                <input 
+                  class="card__input" 
+                  id="number" 
+                  type="text" 
+                  placeholder="16-digit card number"
+                  minlength="16"
+                  maxlength="16"
+                  pattern="\d{16}"
+                  required />
+                <span class="validity number-error"></span>
+              </label>            
+              <label class="card__label">CVV
+                <input  
+                  class="card__input"  
+                  id="cvv"   
+                  type="password"   
+                  minlength="3"   
+                  maxlength="3"
+                  placeholder="3-digit code"   
+                  pattern="\d{3}"
+                  required />
+                <span class="validity cvv-error"></span>
+              </label>
+            </div> 
+            <div class="card__buttons">
+              <button class="card__cancel" type="button">Cancel</button>       
+              <button class="card__submit" type="submit">Submit</button>
+            </div>          
+          </form> 
+        </div>        
+        
+      </div>        
+      <template id="cards">
+        <label class="payment__method">
+          <img class="payment__method-logo" src="/images/master.png" alt="иконка платежной системы">
+          <p class="payment__method-number"></p>
+          <p class="payment__method-expires">Expires</p>
+          <p class="payment__method-date"></p>
+          <p id="default"></p>
+          <input type="radio" name="method" class="payment__check" required>
+          <span class="payment__span"></span>
+        </label>
+      </template>
+    </div>  
+      
+    
+  </body>
+</html>
