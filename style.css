@@ -141,7 +141,7 @@
 }
 
 .payment__method-active .payment__method-check{
-  background-image: url(/images/check-purple.svg);
+  background-image: url(./images/check-purple.svg);
 }
 
 .payment__method-logo {
@@ -159,7 +159,7 @@
 
 .payment__method-check {
   grid-area: check;
-  background-image: url(/images/check-black.svg);
+  background-image: url(./images/check-black.svg);
   width: 40px;
   height: 40px;
   background-position: center;
