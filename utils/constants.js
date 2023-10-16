@@ -17,6 +17,13 @@ export const numberInput = cardForm.querySelector('#number')
 export const expirationInput = cardForm.querySelector('#expiration')
 export const cvvInput = cardForm.querySelector('#cvv')
 
+// export const validationMessages = {
+//   'numberMessage':'Введите 16-значный номер карты, допускаются только цифры',
+//   'cvvMessage': 'Введите 3-значный cvv код, допускаются только цифры',
+//   'expirationMessage': 'Введите дату формата ММ/ГГ',
+//   'nameMessage': 'Введите имя владельца карты, не менее 2 символов'
+// }
+
 export const initialCards = [
   {'number':1111222233334444,
   'expires':'09/27'},

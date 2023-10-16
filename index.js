@@ -16,12 +16,12 @@ import {
   initialCards,
 } from "./utils/constants.js";
 
-//event listeners
+//слушатели событий
 addPaymentButton.addEventListener('click', openCardPopup);
 cardForm.addEventListener('submit', addCard);
 cancelCardButton.addEventListener('click', closeCardPopup);
 
-//add initial cards
+//добавляем начальные карточки
 for (let i in initialCards) {
   const card = cardTemplate.content.cloneNode(true); 
   const hiddenNumber = hideCardNumber(initialCards[i].number)
@@ -59,11 +59,12 @@ function addCard(e) {
   closeCardPopup();
 }
 
+//включаем валидацию всех полей формы
 function checkValidation(form) {
   submitCardButton.disabled = true;
   const inputs = Array.from(form.querySelectorAll('.card__input'));
   inputs.forEach((input) => {
-    input.addEventListener('input', ()=> {
+    input.addEventListener('input', (e)=> {
       checkInputValidity(input);
     })
   })
@@ -71,6 +72,31 @@ function checkValidation(form) {
 
 checkValidation(cardForm);
 
+//можно вводить только цифры, backspace, del и стрелки лево-право
+numberInput.addEventListener('keydown',(e)=> {
+  const regexp = /4[8-9]|5[0-7]|37|39|46|^8$/
+  if(!regexp.test(e.keyCode)) {
+    e.preventDefault()
+  }
+})
+
+//можно вводить только цифры, backspace, del и стрелки лево-право
+expirationInput.addEventListener('keydown', (e)=> {
+  const regexp = /4[8-9]|5[0-7]|37|39|46|191|^8$/
+  if(!regexp.test(e.keyCode)) {
+    e.preventDefault()
+  }
+})
+
+//можно вводить только цифры, backspace, del и стрелки лево-право
+cvvInput.addEventListener('keydown', (e)=> {
+  const regexp = /4[8-9]|5[0-7]|37|39|46|^8$/
+  if(!regexp.test(e.keyCode)) {
+    e.preventDefault()
+  }
+})
+
+//валидация для поля ввода
 function checkInputValidity(input) {
   const error = cardForm.querySelector(`.${input.id}-error`)    
   if(!input.validity.valid) {   
@@ -87,10 +113,17 @@ function checkInputValidity(input) {
   }
 }
 
+
+//меняем данные на картинке карты при вводе в поле формы
 function changeCardData(input) {
   cardForm.querySelector(`#card-${input.id}`).innerText = input.value;
+  if(input.id==='number') {
+    cardForm.querySelector(`#card-${input.id}`).innerText = 
+      input.value.substring(0,4) + ' ' + input.value.substring(4, 8)+ ' ' +input.value.substring(8, 12)+ ' ' + input.value.substring(12, 16)
+  }
 }
 
+//восстанавливаем данные на картинке при закрытии формы
 function restoreCardData() {
   cardForm.querySelector('#card-name').innerText = 'Vasya Pupkin'
   cardForm.querySelector('#card-expiration').innerText = '09/23'
