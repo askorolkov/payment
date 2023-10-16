@@ -6,7 +6,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment</title>
-    <script type="module" crossorigin src="./assets/index-c10d3dde.js"></script>
+    <script type="module" crossorigin src="./assets/index-23d6c71c.js"></script>
     <link rel="stylesheet" href="./assets/index-004d37f3.css">
   </head>
   <body class="page">
@@ -59,11 +59,10 @@
                 <input 
                   class="card__input" 
                   id="number" 
-                  type="text" 
+                  type="text"
                   placeholder="16-digit card number"
                   minlength="16"
                   maxlength="16"
-                  pattern="\d{16}"
                   required />
                 <span class="validity number-error"></span>
               </label>            
@@ -75,7 +74,7 @@
                   minlength="3"   
                   maxlength="3"
                   placeholder="3-digit code"   
-                  pattern="\d{3}"
+
                   required />
                 <span class="validity cvv-error"></span>
               </label>
@@ -89,7 +88,7 @@
       </div>        
       <template id="cards">
         <label class="payment__method">
-          <img src="./mastercard.png" class="payment__method-logo"  alt="иконка платежной системы">
+         <img src="./mastercard.png" class="payment__method-logo"  alt="иконка платежной системы">
           <p class="payment__method-number"></p>
           <p class="payment__method-expires">Expires</p>
           <p class="payment__method-date"></p>
