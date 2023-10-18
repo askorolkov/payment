@@ -36,6 +36,38 @@
   justify-content: center;
 }
 
+.profile__link {
+  font-weight: 400;
+  text-decoration: none;
+  color:rgb(72, 72, 255);
+}
+
+.profile__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  padding: 0 .5rem;
+  align-self: self-start;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.breadcrumb li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: "→";
+}
+
 .payment {
   margin: 50px auto;
   display: flex;

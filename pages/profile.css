@@ -1,0 +1,59 @@
+@import url(../normalize.css);
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url(../fonts/static/Urbanist-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url(../fonts/static/Urbanist-Light.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url(../fonts/static/Urbanist-Medium.ttf);
+  font-style: medium;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url(../fonts/static/Urbanist-Italic.ttf);
+  font-style: italic;
+}
+
+.page {
+  background-color: #d3c2c2;
+  font-family: 'Urbanist';
+}
+
+.page__container {
+  width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.account__title {
+  margin: 20px auto;
+}
+
+.account__data {
+  margin: 0 auto;
+}
+
+.profile__link {
+  margin: 20px auto;
+  font-weight: 400;
+  text-decoration: none;
+  color:rgb(72, 72, 255);
+}
+
+.profile__link:hover {
+  text-decoration: underline;
+}
