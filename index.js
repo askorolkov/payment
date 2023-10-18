@@ -52,7 +52,7 @@ function hideCardNumber(num) {
 function addCard(e) {
   e.preventDefault()
   const card = cardTemplate.content.cloneNode(true);  
-  card.querySelector('.payment__method-number').textContent = numberInput.value;
+  card.querySelector('.payment__method-number').textContent = hideCardNumber(numberInput.value);
   card.querySelector('.payment__method-date').textContent = expirationInput.value;
   cardsSection.append(card);
   
@@ -112,7 +112,6 @@ function checkInputValidity(input) {
     changeCardData(input)
   }
 }
-
 
 //меняем данные на картинке карты при вводе в поле формы
 function changeCardData(input) {

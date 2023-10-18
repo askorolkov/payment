@@ -5,6 +5,6 @@
 <defs>
 </defs>
 <g transform="matrix(10 0 0 10 200 200)"  >
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;"  transform=" translate(-12, -12)" d="M 12 2 C 6.486 2 2 6.486 2 12 s 4.486 10 10 10 s 10 -4.486 10 -10 S 17.514 2 12 2 z m -1.999 14.413 l -3.713 -3.705 L 7.7 11.292 l 2.299 2.295 l 5.294 -5.294 l 1.414 1.414 l -6.706 6.706 z" stroke-linecap="round" />
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(161,161,161); fill-rule: nonzero; opacity: 1;"  transform=" translate(-12, -12)" d="M 12 2 C 6.486 2 2 6.486 2 12 s 4.486 10 10 10 s 10 -4.486 10 -10 S 17.514 2 12 2 z m -1.999 14.413 l -3.713 -3.705 L 7.7 11.292 l 2.299 2.295 l 5.294 -5.294 l 1.414 1.414 l -6.706 6.706 z" stroke-linecap="round" />
 </g>
 </svg>
